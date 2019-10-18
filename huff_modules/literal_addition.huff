@@ -1,0 +1,37 @@
+
+template <const>
+#define macro FOO = takes(0) returns(1) {
+    <const>
+}
+
+#define macro BAR = takes(0) returns(1) {
+    0x01
+}
+
+#define macro BAZ = takes(0) returns(1) {
+    0x02
+}
+
+#define macro BAR_SIZE = takes(0) returns(1) {
+    __codesize(BAR)
+}
+
+#define macro BAZ_SIZE = takes(0) returns(1) {
+    __codesize(BAZ)
+}
+
+#define macro RUNTIME = takes(0) returns(0) {
+    // FOO<0x10+0x10>()    // this works
+    // FOO<0x10+BAR>()     // this works
+    // FOO<BAR+BAZ>()      // this works
+    // FOO<BAZ_SIZE>()     // this works
+
+    // these all throw
+    // `Error: cannot add BAZ_SIZE, [object Object] not a literal`
+    // FOO<0x10+BAZ_SIZE>()
+    // FOO<BAR_SIZE+BAZ_SIZE>()
+    // FOO<0x10+__codesize(BAZ)>()
+}
+
+
+#define macro CONSTRUCTOR = takes(0) returns(0) { }
