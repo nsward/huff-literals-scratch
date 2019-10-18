@@ -1,0 +1,4 @@
+[submodule "huff"]
+	path = huff
+	url = git@github.com:nsward/huff.git
+	branch = develop
