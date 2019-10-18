@@ -21,11 +21,12 @@ template <const>
 }
 
 #define macro RUNTIME = takes(0) returns(0) {
-    // FOO<0x10+0x10>()    // this works
-    // FOO<0x10+BAR>()     // this works
-    // FOO<BAR+BAZ>()      // this works
-    // FOO<BAZ_SIZE>()     // this works
+    FOO<0x10+0x10>()    // this works
+    FOO<0x10+BAR>()     // this works
+    FOO<BAR+BAZ>()      // this works
+    FOO<BAZ_SIZE>()     // this works
 
+    // TODO:
     // these all throw
     // `Error: cannot add BAZ_SIZE, [object Object] not a literal`
     // FOO<0x10+BAZ_SIZE>()

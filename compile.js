@@ -7,7 +7,7 @@ const compiler = require('./huff/src/compiler');
 const modulesPath = path.posix.resolve(__dirname, './huff_modules');
 
 const literal_addition = parseContract('literal_addition.huff', modulesPath);
-// const copy_constructor_args = parseContract('copy_constructor_args.huff', modulesPath);
+const copy_constructor_args = parseContract('copy_constructor_args.huff', modulesPath);
 
 const contracts = [
   {

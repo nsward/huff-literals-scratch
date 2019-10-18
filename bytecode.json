@@ -1,0 +1,12 @@
+[
+  {
+    "name": "literal_addition",
+    "bytecode": "0x6020601160036002",
+    "runtimeBytecode": "0x6020601160036002"
+  },
+  {
+    "name": "copy_constructor_args",
+    "bytecode": "0x",
+    "runtimeBytecode": "0x"
+  }
+]
