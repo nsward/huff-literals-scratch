@@ -6,7 +6,7 @@ This is repo is to illustrate the issue and test the fix. Just replace the huff/
 
 # Usage
 `git clone --recursive`  
-`npm compile` -- compiles the huff macros into bytecode in `bytecode.json`
+`npm run compile` -- compiles the huff macros into bytecode in `bytecode.json`
 
 
 To see the issue and what literal addition works / doesn't work, uncomment lines in `huff_modules/literal_addition.huff` (or grep for the `TODO:@here`) and compile again.
